@@ -1,0 +1,80 @@
+:root{
+  --primary: #F472B6;
+  --secondary: #F59E0B;
+  --background: #FDF2F8;
+  --surface: #FFFFFF;
+  --text: #374151;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background: var(--background);
+  color: var(--text);
+}
+
+header{
+  background: var(--surface);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+nav{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.brand-badge{
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 6px 16px rgba(244,114,182,0.35);
+}
+
+.btn{
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--surface);
+  color: var(--text);
+  transition: box-shadow .2s ease, transform .05s ease, background .2s ease;
+}
+
+.btn.primary{
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 6px 16px rgba(244,114,182,0.35);
+}
+
+.btn:hover{
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+main{
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 20px 40px;
+}
+
+.card{
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+}
