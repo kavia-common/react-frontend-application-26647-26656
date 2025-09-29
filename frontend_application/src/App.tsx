@@ -5,7 +5,7 @@ import { useState } from 'react'
  * Root application component.
  * This is the starting point for building the UI.
  */
-export default function App() {
+export default function App(): JSX.Element {
   const [count, setCount] = useState(0)
 
   return (

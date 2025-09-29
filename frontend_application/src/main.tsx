@@ -7,8 +7,14 @@ import './styles.css'
 /**
  * Application bootstrap entry point.
  * Renders the root React component into the #root element.
+ * Throws a descriptive error if the #root container is missing.
  */
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootEl = document.getElementById('root')
+if (!rootEl) {
+  throw new Error('Root container with id "root" not found in index.html')
+}
+
+ReactDOM.createRoot(rootEl).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
